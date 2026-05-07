@@ -18,7 +18,7 @@ class BookRepository
     }
 
     /**
-     * Add a new book using prepared statement (SQL Injection safe)
+     * Add a new book using prepared statement 
      * 
      * @param string $title
      * @param string $author
@@ -44,7 +44,7 @@ class BookRepository
     }
 
     /**
-     * Get a book by ID using prepared statement (SQL Injection safe)
+     * Get a book by ID using prepared statement 
      * 
      * @param int $id
      * @return array|false Book data or false if not found
@@ -62,7 +62,7 @@ class BookRepository
     }
 
     /**
-     * Search books by keyword using prepared statement (SQL Injection safe)
+     * Search books by keyword using prepared statement 
      * 
      * @param string $keyword
      * @return array Array of matching books
@@ -118,7 +118,7 @@ class BookRepository
     }
 
     /**
-     * Update book information using prepared statement (SQL Injection safe)
+     * Update book information using prepared statement 
      * 
      * @param int $id
      * @param array $data Array with keys: title, author, year, genre
@@ -143,7 +143,7 @@ class BookRepository
     }
 
     /**
-     * Delete a book using prepared statement (SQL Injection safe)
+     * Delete a book using prepared statement 
      * 
      * @param int $id
      * @return bool True on success

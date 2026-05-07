@@ -19,7 +19,7 @@ class BorrowRepository
     }
 
     /**
-     * Create a borrow record using prepared statement (SQL Injection safe)
+     * Create a borrow record using prepared statement 
      * 
      * @param int $student_id
      * @param int $book_id
@@ -49,7 +49,7 @@ class BorrowRepository
     }
 
     /**
-     * Return a book using prepared statement (SQL Injection safe)
+     * Return a book using prepared statement 
      * Calculates fine if book is overdue
      * 
      * @param int $record_id
@@ -92,7 +92,7 @@ class BorrowRepository
     }
 
     /**
-     * Get a borrow record using prepared statement (SQL Injection safe)
+     * Get a borrow record using prepared statement 
      * 
      * @param int $record_id
      * @return array|false Borrow record data or false if not found
@@ -110,7 +110,7 @@ class BorrowRepository
     }
 
     /**
-     * Get all borrow records for a specific student using prepared statement (SQL Injection safe)
+     * Get all borrow records for a specific student using prepared statement 
      * 
      * @param int $student_id
      * @return array Array of borrow records
@@ -131,7 +131,7 @@ class BorrowRepository
     }
 
     /**
-     * Get all overdue books using prepared statement (SQL Injection safe)
+     * Get all overdue books using prepared statement 
      * 
      * @return array Array of overdue borrow records
      */
@@ -228,7 +228,7 @@ class BorrowRepository
     }
 
     /**
-     * Get fines for a specific student using prepared statement (SQL Injection safe)
+     * Get fines for a specific student using prepared statement 
      * 
      * @param int $student_id
      * @return float Total fines for student

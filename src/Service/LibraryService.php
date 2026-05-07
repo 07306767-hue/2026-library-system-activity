@@ -209,6 +209,34 @@ class LibraryService
     }
 
     /**
+     * Generate the report HTML directly from the service layer.
+     *
+     * This is a deliberate Single Responsibility Principle violation because
+     * the service now handles presentation concerns in addition to business logic.
+     *
+     * @return string HTML content for the report
+     * @throws ValidationException
+     */
+    public function generateReportHtml(): string
+    {
+        $report = $this->generateReport();
+
+        $totalBooks = htmlspecialchars((string)$report['total_books'], ENT_QUOTES, 'UTF-8');
+        $borrowed = htmlspecialchars((string)$report['borrowed'], ENT_QUOTES, 'UTF-8');
+        $returned = htmlspecialchars((string)$report['returned'], ENT_QUOTES, 'UTF-8');
+        $totalFines = htmlspecialchars(number_format((float)$report['total_fines'], 2), ENT_QUOTES, 'UTF-8');
+
+        return <<<HTML
+            <ul>
+                <li>Total books: {$totalBooks}</li>
+                <li>Borrowed: {$borrowed}</li>
+                <li>Returned: {$returned}</li>
+                <li>Total fines: {$totalFines}</li>
+            </ul>
+        HTML;
+    }
+
+    /**
      * Validate book input data
      * 
      * @param string $title

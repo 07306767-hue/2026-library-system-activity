@@ -1,15 +1,10 @@
 {
     "name": "student/2026-library-system-activity",
+    "type": "library",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "Student\\2026LibrarySystemActivity\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "07306767-hue",
-            "email": "07306767@dwc-legazpi.edu"
-        }
-    ],
     "require": {}
 }

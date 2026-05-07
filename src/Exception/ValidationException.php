@@ -7,6 +7,6 @@ namespace App\Exception;
 use RuntimeException;
 
 
-class DatabaseException extends RuntimeException
+class ValidationException extends RuntimeException
 {
 }

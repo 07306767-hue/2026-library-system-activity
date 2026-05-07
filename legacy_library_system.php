@@ -24,7 +24,7 @@ class lib_system
     }
     
     /**
-     * Add a book using prepared statement (SQL Injection safe)
+     * Add a book using prepared statement 
      */
     function addBook($title, $author, $year, $genre)
     {
@@ -44,7 +44,7 @@ class lib_system
     }
     
     /**
-     * Get a book by ID using prepared statement (SQL Injection safe)
+     * Get a book by ID using prepared statement 
      */
     function getBook($id)
     {
@@ -59,7 +59,7 @@ class lib_system
     }
     
     /**
-     * Borrow a book using prepared statement (SQL Injection safe)
+     * Borrow a book using prepared statement 
      */
     function borrowBook($student_id, $book_id, $days)
     {
@@ -84,7 +84,7 @@ class lib_system
     }
     
     /**
-     * Return a book using prepared statement (SQL Injection safe)
+     * Return a book using prepared statement 
      */
     function returnBook($return_id)
     {
@@ -146,7 +146,7 @@ class lib_system
     }
     
     /**
-     * Search books by keyword using prepared statement (SQL Injection safe)
+     * Search books by keyword using prepared statement 
      */
     function searchBooks($kw)
     {
@@ -165,7 +165,7 @@ class lib_system
     }
     
     /**
-     * Get overdue books using prepared statement (SQL Injection safe)
+     * Get overdue books using prepared statement 
      */
     function getOverdueBooks()
     {
